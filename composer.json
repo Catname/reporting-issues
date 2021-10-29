@@ -1,0 +1,19 @@
+{
+    "name": "catname\/reporting-issues",
+    "description": "A Report SDK From IssueSystem For Other Projects",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ZhangHQ",
+            "email": "tomcath@foxmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Catname\\ReportingIssues\\": "src"
+        }
+    }
+}
