@@ -3,9 +3,9 @@
 namespace Catname\ReportingIssues;
 
 //use App\Handlers\reportIssues;
-use Illuminate\Support\ServiceProvider;
 
-class ReportServiceProvider extends ServiceProvider
+
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
     protected $defer = true;
