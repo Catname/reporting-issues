@@ -30,10 +30,18 @@ class authorizations
     public static function login()
     {
         $url = config('reportissue.report_host') . 'api/admin/projects/authorizations';
-        $response = Http::asForm()->post($url, [
+        $loginInfo = [
             'client_id' => config('reportissue.client_id'),
             'client_secret' => config('reportissue.client_secret')
-        ]);
+        ];
+        //\Log::channel('errors')->info('登录方法中的loginInfo', $loginInfo);  //debug
+        $signHandler = new SignHandler();
+        $timeStamp = now()->getTimestamp();
+
+        $response = Http::withHeaders([
+            'sign' => $signHandler->getASign('POST', $timeStamp, $loginInfo),
+            'timestamp' => $timeStamp,
+        ])->asForm()->post($url, $loginInfo);
 
         if ($response['code'] == 201) {
             // 登录成功
@@ -42,7 +50,7 @@ class authorizations
 
             return $response['access_token'];
         }
-
+        \Log::warning('登录工单系统失败:'.$response->body());
         return false;
     }
 

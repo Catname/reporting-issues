@@ -16,5 +16,12 @@
         "psr-4": {
             "Catname\\ReportingIssues\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "catname\\ReportingIssues\\ReportServiceProvider"
+            ]
+        }
     }
 }

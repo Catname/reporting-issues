@@ -40,7 +40,7 @@ class SignHandler
     {
         $str = self::formatBizQueryParaMap($data, true);
         #得到待签名字符串
-        $str = $str . "&key=nice123456@@";
+        $str = $str . config('reportissue.sign_salt');
         return $str;
     }
 

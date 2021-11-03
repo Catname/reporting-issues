@@ -20,7 +20,7 @@ class reportIssues
      */
     public static function report(string $message, array $data)
     {
-        $content = $message . ' ；相关错误信息：[ ' . json_encode($data) . ']';
+        $content = $message . ' ；相关错误信息：[' . json_encode($data) . ']';
         $url = config('reportissue.report_host') . 'api/admin/reports';
         $accessToken = authorizations::getAccessToken();
 
