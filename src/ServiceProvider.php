@@ -32,8 +32,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/reportissue.php' => config_path('reportissue.php'),
-        ], 'config');
+            __DIR__.'/config/reportissue.php' => config_path('reportissue.php'),
+        ], 'issueconfig');
     }
 
     public function provides()
