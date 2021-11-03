@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "catname\\ReportingIssues\\ServiceProvider"
+                "Catname\\ReportingIssues\\ServiceProvider"
             ]
         }
     }
