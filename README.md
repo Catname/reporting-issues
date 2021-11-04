@@ -11,17 +11,21 @@ $ composer require catname/reporting-issues -vvv
 
 ## Usage
 
-TODO
+### 发布配置文件
 
-## Contributing
+```shell
+$ php artisan vendor:publish --Provider: Catname\ReportingIssues\ReportServiceProvider
+```
 
-You can contribute in one of three ways:
+### 在 .env 中添加必要的配置项
+具体配置值可以从后台获取
 
-1. File bug reports using the [issue tracker](https://github.com/catname/reporting-issues/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/catname/reporting-issues/issues).
-3. Contribute new features or update the wiki.
-
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
+```dotenv
+REPORT_HOST=
+REPORT_ID=
+REPORT_SECRET=
+REPORT_SIGN_SALT=
+```
 
 ## License
 
