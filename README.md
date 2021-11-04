@@ -27,6 +27,30 @@ REPORT_SECRET=
 REPORT_SIGN_SALT=
 ```
 
+### 示例
+
+参数类型与 Laravel Log 一致
+
+```php
+<?php
+
+use Catname\ReportingIssues\reportIssues;
+...
+reportIssues::report(string 'messages', array '系统报错');
+...
+```
+
+返回值示例
+
+
+```json
+{
+    "code": 200,
+    "messages": "成功！",
+    "data": []
+}
+```
+
 ## License
 
 MIT
