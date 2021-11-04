@@ -18,7 +18,7 @@ class reportIssues
      * @author: ZhangHQ
      * @email : tomcath@foxmail.com
      */
-    public static function report(string $message, array $data)
+    public function report(string $message, array $data)
     {
         $content = $message . ' ；相关错误信息：[' . json_encode($data) . ']';
         $url = config('reportissue.report_host') . 'api/admin/reports';
