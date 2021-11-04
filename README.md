@@ -14,7 +14,7 @@ $ composer require catname/reporting-issues -vvv
 ### 发布配置文件
 
 ```shell
-$ php artisan vendor:publish --Provider: Catname\ReportingIssues\ReportServiceProvider
+$ php artisan vendor:publish --provider="Catname\ReportingIssues\ReportServiceProvider"
 ```
 
 ### 在 .env 中添加必要的配置项
