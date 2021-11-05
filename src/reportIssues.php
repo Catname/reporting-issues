@@ -29,6 +29,7 @@ class reportIssues
 
         $contentData = [
             'issue_content' => $content,
+            'test_mode' => config('reportissue.test_mode'),
             //'media' => $data['media'], // Json
         ];
 

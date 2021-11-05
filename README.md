@@ -21,10 +21,14 @@ $ php artisan vendor:publish --provider="Catname\ReportingIssues\ReportServicePr
 具体配置值可以从后台获取
 
 ```dotenv
+#工单相关
+#工单系统的域名
 REPORT_HOST=
 REPORT_ID=
 REPORT_SECRET=
 REPORT_SIGN_SALT=
+#测试模式 首次安装先测试能否上报成功，成功后改为 false
+REPORT_TEST_MODE=true
 ```
 
 ### 示例
@@ -50,6 +54,11 @@ reportIssues::report(string 'messages', array '系统报错');
     "data": []
 }
 ```
+
+## 注意事项
+### 通过宝塔面板搭建的环境可能出现 cURL 证书错误
+#### 解决方案：
+[手动安装证书](https://docs.guzzlephp.org/en/stable/request-options.html#verify)
 
 ## License
 
