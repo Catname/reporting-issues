@@ -33,7 +33,7 @@ class ReportServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             __DIR__.'/config/reportissue.php' => config_path('reportissue.php'),
-        ], 'issueconfig');
+        ], 'config');
     }
 
     public function provides()
