@@ -59,7 +59,7 @@ reportIssues::report(string 'messages', array '系统报错');
 ### 通过宝塔面板搭建的环境可能出现 cURL 证书错误
 #### 解决方案：
 [手动安装证书](https://docs.guzzlephp.org/en/stable/request-options.html#verify)
-
+### 该包依赖于 Laravel 8
 ## License
 
 MIT
